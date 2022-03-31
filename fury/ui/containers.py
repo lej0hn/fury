@@ -60,28 +60,7 @@ class Panel2D(UI):
         self._drag_offset = None
 
     def _setup(self):
-        """Setup this UI component.
-
-        Create the background (Rectangle2D) of the panel.
-        Create the borders (Rectangle2D) of the panel.
-        """
-        self._elements = []
-        self.element_offsets = []
-        self.background = Rectangle2D()
-
-        if self.has_border:
-            self.borders = {'left': Rectangle2D(),
-                            'right': Rectangle2D(),
-                            'top': Rectangle2D(),
-                            'bottom': Rectangle2D()}
-
-            self.border_coords = {'left': (0., 0.),
-                                  'right': (1., 0.),
-                                  'top': (0., 1.),
-                                  'bottom': (0., 0.)}
-
-            for key in self.borders.keys():
-                self.borders[key].color = self._border_color
+    orders[key].color = self._border_color
                 self.add_element(self.borders[key], self.border_coords[key])
 
             for key in self.borders.keys():
